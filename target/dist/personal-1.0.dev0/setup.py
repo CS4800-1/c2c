@@ -44,10 +44,7 @@ if __name__ == '__main__':
         scripts = [],
         packages = [],
         namespace_packages = [],
-        py_modules = [
-            'helloworld',
-            'toast'
-        ],
+        py_modules = ['toast'],
         entry_points = {},
         data_files = [],
         package_data = {},

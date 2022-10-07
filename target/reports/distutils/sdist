@@ -1,0 +1,32 @@
+running clean
+'build\lib' does not exist -- can't clean it
+'build\bdist.win-amd64' does not exist -- can't clean it
+'build\scripts-3.9' does not exist -- can't clean it
+running sdist
+running egg_info
+creating personal.egg-info
+writing personal.egg-info\PKG-INFO
+writing dependency_links to personal.egg-info\dependency_links.txt
+writing namespace_packages to personal.egg-info\namespace_packages.txt
+writing top-level names to personal.egg-info\top_level.txt
+writing manifest file 'personal.egg-info\SOURCES.txt'
+reading manifest file 'personal.egg-info\SOURCES.txt'
+writing manifest file 'personal.egg-info\SOURCES.txt'
+warning: sdist: standard file not found: should have one of README, README.rst, README.txt, README.md
+
+running check
+creating personal-1.0.dev0
+creating personal-1.0.dev0\personal.egg-info
+copying files to personal-1.0.dev0...
+copying setup.py -> personal-1.0.dev0
+copying toast.py -> personal-1.0.dev0
+copying personal.egg-info\PKG-INFO -> personal-1.0.dev0\personal.egg-info
+copying personal.egg-info\SOURCES.txt -> personal-1.0.dev0\personal.egg-info
+copying personal.egg-info\dependency_links.txt -> personal-1.0.dev0\personal.egg-info
+copying personal.egg-info\namespace_packages.txt -> personal-1.0.dev0\personal.egg-info
+copying personal.egg-info\top_level.txt -> personal-1.0.dev0\personal.egg-info
+copying personal.egg-info\zip-safe -> personal-1.0.dev0\personal.egg-info
+Writing personal-1.0.dev0\setup.cfg
+creating dist
+Creating tar archive
+removing 'personal-1.0.dev0' (and everything under it)

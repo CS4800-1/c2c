@@ -6,25 +6,6 @@
       "branches_partial": 0,
       "coverage": 0.0,
       "lines": [
-        1,
-        4,
-        5
-      ],
-      "lines_not_covered": [
-        1,
-        4,
-        5
-      ],
-      "module": "helloworld",
-      "sum_lines": 3,
-      "sum_lines_not_covered": 3
-    },
-    {
-      "branches": 0,
-      "branches_missing": 0,
-      "branches_partial": 0,
-      "coverage": 0.0,
-      "lines": [
         2,
         4,
         6
