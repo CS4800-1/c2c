@@ -8,7 +8,7 @@ use_plugin("python.coverage")
 use_plugin("python.distutils")
 
 
-name = "c2c"
+name = "personal"
 default_task = "publish"
 
 
