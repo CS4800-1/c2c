@@ -6,18 +6,16 @@
       "branches_partial": 0,
       "coverage": 0.0,
       "lines": [
-        2,
-        4,
-        6
+        3,
+        4
       ],
       "lines_not_covered": [
-        2,
-        4,
-        6
+        3,
+        4
       ],
-      "module": "toast",
-      "sum_lines": 3,
-      "sum_lines_not_covered": 3
+      "module": "a6MV",
+      "sum_lines": 2,
+      "sum_lines_not_covered": 2
     }
   ],
   "overall_branch_coverage": 100,

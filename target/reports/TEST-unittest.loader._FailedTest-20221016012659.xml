@@ -1,11 +1,14 @@
-
-Running tests...
-----------------------------------------------------------------------
-E...
-======================================================================
-ERROR [0.003s]: a6MV_tests (unittest.loader._FailedTest)
-----------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="unittest.loader._FailedTest-20221016012659" tests="1" file="unittest/loader.py" time="0.003" timestamp="2022-10-16T01:26:59" failures="0" errors="1" skipped="0">
+	<testcase classname="unittest.loader._FailedTest" name="a6MV_tests" time="0.003" timestamp="2022-10-16T01:26:59">
+		<error type="ImportError" message="Failed to import test module: a6MV_tests
 Traceback (most recent call last):
+  File &quot;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3568.0_x64__qbz5n2kfra8p0\lib\unittest\loader.py&quot;, line 154, in loadTestsFromName
+    module = __import__(module_name)
+  File &quot;c:\users\moina\documents\..cpp\.f2022\cs 4800\c2c\c2c\src\unittest\python\a6MV_tests.py&quot;, line 2, in &lt;module&gt;
+    from src.main.python.a6MV import validTime
+ModuleNotFoundError: No module named 'src'
+"><![CDATA[Traceback (most recent call last):
   File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3568.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 59, in testPartExecutor
     yield
   File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3568.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 592, in run
@@ -22,10 +25,6 @@ Traceback (most recent call last):
     from src.main.python.a6MV import validTime
 ModuleNotFoundError: No module named 'src'
 
-
-----------------------------------------------------------------------
-Ran 4 tests in 0.036s
-
-FAILED (errors=1)
-
-Generating XML reports...
+]]></error>
+	</testcase>
+</testsuite>
