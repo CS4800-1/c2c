@@ -11,6 +11,21 @@ body{
     justify-content: flex-start;
     min-height: 100vh;
 }
+.myText{
+    width: 220px; 
+    height: 40px;
+    background-color: gainsboro;
+    border-radius: 7px;
+}
+.try{
+    width: 80px; 
+    height: 35px;
+    border-radius: 5px;
+}
+.wrapper1 header{
+    display: inline-block;
+    align-items: center;
+}
 .wrapper{
     width: 450px;
     background: #fff;

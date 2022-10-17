@@ -11,8 +11,14 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+  
     <div class="header">
         <img src="c2c_logo.png" alt="">
+        <div align="center"; style="position:relative;left:300px;top:-505px;"  class="text">
+          <input type="text" class="myText" placeholder="EVENT NAME...">
+          <button class="try" onclick="myFunction()">Try it</button>
+          <p id="demo"></p>
+        </div>
     </div>
     <div class="wrapper">
       <header>
@@ -35,6 +41,28 @@
         <ul class="days"></ul>
       </div>
     </div>
-    
+    <div class="wrapper">
+      <div mbsc-page class="demo-time-picker">
+        <div style="height:100%">
+              <label>
+                Time picker
+                <input id="demo-time" mbsc-input data-input-style="outline" data-label-style="stacked" placeholder="Please select..." />
+              </label>
+        </div>
+      </div>
+  </div>
+  <script>
+        
+    mobiscroll.setOptions({
+locale: mobiscroll.localeEn,  // Specify language like: locale: mobiscroll.localePl or omit setting to use default
+theme: 'ios',                 // Specify theme like: theme: 'ios' or omit setting to use default
+themeVariant: 'light'         // More info about themeVariant: https://docs.mobiscroll.com/5-19-1/javascript/datetime#opt-themeVariant
+});
+
+mobiscroll.datepicker('#demo-time', {
+controls: ['time']
+});
+
+</script>
   </body>
 </html>

@@ -7,6 +7,10 @@ let date = new Date(),
 currYear = date.getFullYear(),
 currMonth = date.getMonth();
 
+function myFunction() {
+    var x = document.getElementsByClassName("myText").value;
+    document.getElementById("demo").innerHTML = x;
+  }
 // storing full name of all months in array
 const months = ["January", "February", "March", "April", "May", "June", "July",
               "August", "September", "October", "November", "December"];
