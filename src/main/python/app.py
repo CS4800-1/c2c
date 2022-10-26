@@ -1,10 +1,11 @@
-from flask import Flask, jsonify, redirect, url_for
+from flask import Flask, render_template, redirect, url_for
 
 app = Flask(__name__)
 
 @app.route("/")
 def d1():
-	return "Desktop - 1"
+	return render_template('index.html')
+	# return "Desktop - 1"
 
 @app.route("/2")
 def d2():
