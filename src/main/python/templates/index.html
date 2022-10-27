@@ -18,8 +18,9 @@
   <div class="header">
     <img src="{{url_for('static', filename='c2c_logo.png')}}" alt="">
     <div text-align="center" ; style="position:relative;left:300px;top:-505px;" class="text">
-      <input type="text" class="myText" placeholder="EVENT NAME...">
-      <button class="try" onclick="myFunction()">Try it</button>
+      <input type="text" id="event_name" class="myText" placeholder="EVENT NAME...">
+      <input type="text" id="id" class="myText" placeholder="UNIQUE ID...">
+      <button id="button_submit" class="try">Submit</button>
       <p id="demo"></p>
     </div>
   </div>
@@ -61,9 +62,49 @@
     </div>
   </div>
 
-  <script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
 
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAaxnJ-eYsIC9A1g_6wAIWCPeRElEVBG3g",
+      authDomain: "coffee2conference.firebaseapp.com",
+      databaseURL: "https://coffee2conference-default-rtdb.firebaseio.com",
+      projectId: "coffee2conference",
+      storageBucket: "coffee2conference.appspot.com",
+      messagingSenderId: "718465301534",
+      appId: "1:718465301534:web:17e424f8ec38caea5a020f"
+    };
 
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    import { getDatabase, set, get, update, remove, ref, child }
+      from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js";
+
+    const db = getDatabase();
+
+    var event_name = document.querySelector("#event_name");
+    var id = document.querySelector("#id");
+    var submitBtn = document.querySelector("#button_submit");
+
+    function InsertData() {
+      set(ref(db, "Events/" + id.value), {
+        Event: event_name.value,
+        ID: id.value
+      })
+        .then(() => {
+          alert("Event Added!")
+        })
+        .catch((error) => {
+          alert(error)
+        });
+    }
+
+    submitBtn.addEventListener('click', InsertData);
 
   </script>
 </body>
