@@ -3,21 +3,29 @@ from flask import Flask, render_template, redirect, url_for
 app = Flask(__name__)
 
 @app.route("/")
-def d1():
+def index():
 	return render_template('index.html')
 	# return "Desktop - 1"
 
-@app.route("/2")
-def d2():
-	return "Desktop - 2"
+@app.route("/landing")
+def landing():
+	return render_template('landing.html')
+	
+@app.route("/team")
+def team():
+	return render_template('team.html')
 
-@app.route("/3")
-def d3():
-	return "Desktop - 3"
+@app.route("/about")
+def about():
+	return render_template('about.html')
 
-@app.route("/1")
-def go_to_one():
-	return redirect(url_for("d1"))
+@app.route("/work")
+def work():
+	return render_template('work.html')
+
+# @app.route("/1")
+# def go_to_one():
+# 	return redirect(url_for("d1"))
 
 
 if __name__=='__main__':
