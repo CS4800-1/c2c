@@ -12,5 +12,6 @@ toast = Notification(app_id="Coffee2Conference",
 
 toast.set_audio(audio.LoopingCall, loop=True)
 							#alt loop=False
-toast.add_actions(label="Check Schedule", launch="https://www.when2meet.com/")
+# toast.add_actions(label="Check Schedule", launch="http://ec2-18-144-155-105.us-west-1.compute.amazonaws.com:8000/landing")
+toast.add_actions(label="Check Schedule", launch="http://ec2-18-144-155-105.us-west-1.compute.amazonaws.com:8000/")
 toast.show()

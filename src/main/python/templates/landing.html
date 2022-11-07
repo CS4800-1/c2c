@@ -85,7 +85,7 @@
   <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
-    import { getAuth, GoogleAuthProvider, signInWithRedirect, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
+    import { getAuth, GoogleAuthProvider, signInWithRedirect, signInWithPopup, setPersistence, browserSessionPersistence } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -108,6 +108,10 @@
     googleLogin.addEventListener('click', (e) => {
       // signInWithRedirect(auth, provider);
       signInWithPopup(auth, provider)
+        .setPersistence(auth, browserSessionPersistence)
+        // Existing and future Auth states are now persisted in the current
+        // session only. Closing the window would clear any existing state even
+        // if a user forgets to sign out.
         .then((result) => {
           // This gives you a Google Access Token. You can use it to access the Google API.
           const credential = GoogleAuthProvider.credentialFromResult(result);
