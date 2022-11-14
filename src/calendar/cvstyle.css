@@ -1,0 +1,49 @@
+body {
+    width: 100%;
+    margin: 0 auto; 
+    background: #f1f8fc;
+}
+
+header {
+    margin-top: 0px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
+
+.logo {
+    width: 12%;
+    height: 12%;
+    text-align: center;
+}
+
+section {
+    margin-top: 50px;
+    padding-left: 5%;
+}
+
+img {
+    width: 500px;
+    height: 500px;
+}
+
+#create {
+    float: left;
+}
+
+#view {
+    float: right;
+}
+
+.button{
+  text-align: center;
+  background-color: #5bacdf;
+  border: none;
+  color: white;
+  padding: 20px;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 80%;
+}
+
