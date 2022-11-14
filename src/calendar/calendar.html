@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Create a Schedule</title>
+	<link rel="stylesheet" href="cstyle.css">
+
+</head>
+
+<body>
+  <div id="logo">
+    <a href="http://google.com">
+      <img src="logo.png" alt="logo" class="logo">
+    </a>
+  </div>
+	<div class="date-picker">
+		<div class="dates">
+			<div class="month-wrapper">
+				<div class="arrow-wrapper-left arrow-wrapper">
+					<div class="arrow-left"></div>
+				</div>
+				<div class="mth"></div>
+				<div class="arrow-wrapper-right arrow-wrapper">
+					<div class="arrow-right"></div>
+				</div>
+			</div>
+			<div class="content-wrapper">
+				<div class="weekdays">
+					<div>M</div>
+					<div>T</div>
+					<div>W</div>
+					<div>T</div>
+					<div>F</div>
+					<div>S</div>
+					<div>S</div>
+				</div>
+				<div class="days"></div>
+			</div>
+		</div>
+	</div>
+	<div class="dates-here"></div>
+</body>
+<script type="text/javascript" src="script.js"></script>
+
+<div class="main-wrapper">
+  <div class="form-wrapper">
+    <form action="https://www.google.com/">  
+      <div class="create-mb-5">
+          <label for="name" class="create-form-label"> Event Name </label>
+          <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter Event Name"
+              class="create-form-input"
+          />
+      </div>
+      <div class="flex flex-wrap create--mx-3">
+        <div class="w-full sm:w-half create-px-3">
+          <div class="create-mb-5 w-full">
+            <label for="date" class="create-form-label"> Start Time </label>
+            <input
+              type="time"
+              name="time"
+              id="time"
+              class="create-form-input"
+            />
+          </div>
+        </div>
+        <div class="w-full sm:w-half create-px-3">
+          <div class="create-mb-5">
+            <label for="time" class="create-form-label"> End Time </label>
+            <input
+              type="time"
+              name="time"
+              id="time"
+              class="create-form-input"
+            />
+          </div>
+        </div>
+      </div>
+      <div>
+          <button class="create-btn">Create Event</button>
+      </div>
+    </form>
+  </div>
+</div>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f1f8fc;
+  }
+  body {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+  }
+  .create-mb-5 {
+    margin-bottom: 20px;
+  }
+  .create-pt-3 {
+    padding-top: 12px;
+  }
+  .main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+  }
+
+  .form-wrapper {
+    margin: 0 auto;
+    max-width: 550px;
+    width: 100%;
+    background: white;
+  }
+  .create-form-label {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074d;
+    margin-bottom: 12px;
+  }
+  .create-form-label-2 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .create-form-input {
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    font-weight: 500;
+    font-size: 16px;
+    color: #6b7280;
+    outline: none;
+    resize: none;
+  }
+  .create-form-input:focus {
+    border-color: #5bacdf;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .create-btn {
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 14px 32px;
+    border: none;
+    font-weight: 600;
+    background-color: #5bacdf;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+  }
+  .create-btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .create--mx-3 {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+  .create-px-3 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .flex {
+    display: flex;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .w-full {
+    width: 100%;
+  }
+  @media (min-width: 540px) {
+    .sm\:w-half {
+      width: 50%;
+    }
+  }
+</style>
+
