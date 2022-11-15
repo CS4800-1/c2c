@@ -12,7 +12,7 @@
 <body>
   <main>
     <div class="big-wrapper light">
-      <img src="{{url_for('static', filename='shape.png')}}" alt="" class="shape" />
+      <!-- <img src="{{url_for('static', filename='shape.png')}}" alt="" class="shape" /> -->
 
       <header>
         <div class="container">
@@ -29,7 +29,8 @@
               <!-- <li><a href="work.html">How it Works</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="team.html">Meet the Team</a></li> -->
-              <li><a href="#" class="btn" id="googleLogin">Login</a></li>
+              <li><a href="#" class="btn" onclick="googleLogin()">Login</a></li>
+              <!-- <button onclick="googleLogin()"> Login </button> -->
             </ul>
           </div>
 
@@ -78,6 +79,8 @@
   <script src="https://kit.fontawesome.com/a81368914c.js"></script>
   <script src="{{url_for('static', filename='app.js')}}"></script>
 
+  <!-- <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js"></script> -->
   <!-- <script src="{{url_for('static', filename='loginScript.js')}}"></script> -->
   <!-- <script src="../static/loginScript.js'"></script> -->
 

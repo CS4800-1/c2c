@@ -23,6 +23,13 @@ def about():
 def work():
 	return render_template('work.html')
 
+@app.route("/createEvent")
+def createEvent():
+	return render_template('calendar.html')
+
+@app.route("/chooseSchedule")
+def chooseSchedule():
+	return render_template('createview.html')
 # @app.route("/1")
 # def go_to_one():
 # 	return redirect(url_for("d1"))
