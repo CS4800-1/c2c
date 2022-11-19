@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,8 @@
 
 </head>
 
+<div class="main-wrapper">
+  <div class="form-wrapper">
 <body>
   <div id="logo">
     <a href="http://google.com">
@@ -42,13 +44,13 @@
 	</div>
 	<div class="dates-here"></div>
 </body>
+
 <script type="text/javascript" src="../static/calscript.js"></script>
 
-<div class="main-wrapper">
-  <div class="form-wrapper">
-    <form action="https://www.google.com/">  
+
+    <form action="https://www.google.com/">
       <div class="create-mb-5">
-          <label for="name" class="create-form-label"> Event Name </label>
+          &nbsp <label for="name" class="create-form-label"> Event Name </label>
           <input
               type="text"
               name="name"
@@ -57,7 +59,9 @@
               class="create-form-input"
           />
       </div>
-      <div class="flex flex-wrap create--mx-3">
+      <!-- Write your comments here -->
+
+      <div class="flex flex-wrap create--mx-4">
         <div class="w-full sm:w-half create-px-3">
           <div class="create-mb-5 w-full">
             <label for="date" class="create-form-label"> Start Time </label>
@@ -87,6 +91,7 @@
     </form>
   </div>
 </div>
+
 <style>
   * {
     margin: 0;
@@ -103,6 +108,10 @@
   .create-pt-3 {
     padding-top: 12px;
   }
+  .logo{
+    margin-left: 120px ;
+  }
+
   .main-wrapper {
     display: flex;
     align-items: center;
@@ -115,6 +124,7 @@
     max-width: 550px;
     width: 100%;
     background: white;
+
   }
   .create-form-label {
     display: block;
@@ -185,4 +195,3 @@
     }
   }
 </style>
-
