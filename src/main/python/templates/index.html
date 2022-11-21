@@ -11,6 +11,7 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
   <script src="{{url_for('static', filename='script.js')}}" defer></script>
+  <!-- <script type="module" src="{{url_for('static', filename='read.js')}}" defer></script> -->
 </head>
 
 <body>
@@ -21,6 +22,16 @@
       <input type="text" id="event_name" class="myText" placeholder="EVENT NAME...">
       <input type="text" id="id" class="myText" placeholder="UNIQUE ID...">
       <button id="button_submit" class="try">Submit</button>
+      <button type="button" id="button_test" class="try">TEST</button>
+      <script type="module" src="../static/read.js"></script>
+
+      <!-- <script>
+        function testFun() {
+          alert("Clicked TEST");
+        }
+        document.getElementById("button_test").addEventListener("click", testFun);
+
+      </script> -->
       <p id="demo"></p>
     </div>
   </div>
@@ -62,6 +73,7 @@
     </div>
   </div>
 
+
   <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
@@ -82,7 +94,7 @@
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
 
-    import { getDatabase, set, get, update, remove, ref, child }
+    import { getDatabase, set, push, get, update, remove, ref, child }
       from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js";
 
     const db = getDatabase();
@@ -92,7 +104,7 @@
     var submitBtn = document.querySelector("#button_submit");
 
     function InsertData() {
-      set(ref(db, "Events/" + id.value), {
+      push(ref(db, "Events/"), {
         Event: event_name.value,
         ID: id.value
       })
@@ -102,6 +114,13 @@
         .catch((error) => {
           alert(error)
         });
+
+      var eventObj = {
+        Event: event_name.value,
+        ID: id.value
+      };
+
+      console.log(eventObj)
     }
 
     submitBtn.addEventListener('click', InsertData);
