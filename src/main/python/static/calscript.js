@@ -17,7 +17,7 @@ let selectedDay = day;
 let selectedMonth = month;
 let selectedYear = year;
 
-const dates = [];
+export const dates = [];
 
 function formatDate(d) {
     let day = d.getDate();

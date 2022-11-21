@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
 import { getDatabase, ref, set, push } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js";
+import { dates } from './calscript.js';
 
 const firebaseConfig = {
 	apiKey: "AIzaSyAaxnJ-eYsIC9A1g_6wAIWCPeRElEVBG3g",
@@ -15,6 +16,7 @@ const app = initializeApp(firebaseConfig);
 var event_name = document.querySelector("#event_name")
 var start_time = document.querySelector("#start_time")
 var end_time = document.querySelector("#end_time")
+var selected_dates = dates
 
 
 function writeUserData(event) { //name, sTime, eTime) {
@@ -27,6 +29,7 @@ function writeUserData(event) { //name, sTime, eTime) {
 	var newKey = eventRef.key
 
 
+
 	// set(reference, {
 	// 	eventName: "ev",
 	// 	user: "n",
@@ -36,7 +39,8 @@ function writeUserData(event) { //name, sTime, eTime) {
 		eventName: event_name.value,
 		startTime: start_time.value,
 		endTime: end_time.value,
-		uniqueKey: newKey
+		uniqueKey: newKey,
+		selectedDates: selected_dates
 	};
 
 	console.log(eventObj)
@@ -47,7 +51,8 @@ function writeUserData(event) { //name, sTime, eTime) {
 		{
 			eventName: event_name.value,
 			startTime: start_time.value,
-			endTime: end_time.value
+			endTime: end_time.value,
+			selectedDates: selected_dates
 		}).then(() => {
 			alert("Event Added!")
 		})
