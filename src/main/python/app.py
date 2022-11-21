@@ -30,6 +30,10 @@ def createEvent():
 @app.route("/options")
 def options():
 	return render_template('createview.html')
+
+@app.route("/testPage")
+def testPage():
+	return render_template('testPage.html')
 # @app.route("/1")
 # def go_to_one():
 # 	return redirect(url_for("d1"))

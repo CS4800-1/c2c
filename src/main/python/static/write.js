@@ -54,7 +54,7 @@ function writeUserData(event) { //name, sTime, eTime) {
 			endTime: end_time.value,
 			selectedDates: selected_dates
 		}).then(() => {
-			alert("Event Added!")
+			alert("Event Added!\nReference Key: " + newKey)
 		})
 		.catch((error) => {
 			alert(error)
