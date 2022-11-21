@@ -27,8 +27,8 @@ def work():
 def createEvent():
 	return render_template('calendar.html')
 
-@app.route("/chooseSchedule")
-def chooseSchedule():
+@app.route("/options")
+def options():
 	return render_template('createview.html')
 # @app.route("/1")
 # def go_to_one():
