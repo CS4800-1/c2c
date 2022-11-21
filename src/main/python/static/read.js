@@ -12,19 +12,9 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-var event_name = document.querySelector("#event_name").value
-var start_time = document.querySelector("#start_time").value
-var end_time = document.querySelector("#end_time").value
-
-function testFun() {
-	alert("YOU CLICKED ME!");
-	var eventObj = {
-		eventName: event_name.value
-	};
-
-	console.log(eventObj)
-}
-// document.getElementById("button_test").addEventListener("click", testFun);
+var event_name = document.querySelector("#event_name")
+var start_time = document.querySelector("#start_time")
+var end_time = document.querySelector("#end_time")
 
 
 function writeUserData(event) { //name, sTime, eTime) {
@@ -33,6 +23,9 @@ function writeUserData(event) { //name, sTime, eTime) {
 	const db = getDatabase();
 	const reference = ref(db, 'Events/');
 
+	var eventRef = push(reference);
+	var newKey = eventRef.key
+
 
 	// set(reference, {
 	// 	eventName: "ev",
@@ -40,21 +33,24 @@ function writeUserData(event) { //name, sTime, eTime) {
 	// 	time: "number"
 	// });
 	var eventObj = {
-		eventName: event_name,
-		startTime: start_time,
-		endTime: end_time
+		eventName: event_name.value,
+		startTime: start_time.value,
+		endTime: end_time.value,
+		uniqueKey: newKey
 	};
 
 	console.log(eventObj)
 	//push generates unique id
 
-	push(reference, {
-		eventName: event_name,
-		startTime: start_time,
-		endTime: end_time
-	}).then(() => {
-		alert("Event Added!")
-	})
+	// push(reference,
+	set(eventRef,
+		{
+			eventName: event_name.value,
+			startTime: start_time.value,
+			endTime: end_time.value
+		}).then(() => {
+			alert("Event Added!")
+		})
 		.catch((error) => {
 			alert(error)
 		});
@@ -64,7 +60,5 @@ function writeUserData(event) { //name, sTime, eTime) {
 
 
 var button_submit = document.querySelector("#button_submit")
-
-// button_submit.addEventListener('click', myFunction)
 button_submit.addEventListener('click', writeUserData)
 

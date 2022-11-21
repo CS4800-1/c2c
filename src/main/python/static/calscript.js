@@ -9,8 +9,8 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 const date = new Date();
 
 let day = date.getDate();
-let month = date.getMonth(); 
-let year = date.getFullYear(); 
+let month = date.getMonth();
+let year = date.getFullYear();
 
 let selectedDate = date;
 let selectedDay = day;
@@ -44,7 +44,7 @@ function populateDates() {
 
     const firstDayIndex = new Date(date.getFullYear(), date.getMonth(), 0).getDay();
     const lastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay();
-    
+
     const nextDays = 7 - lastDayIndex;
 
     let days = "";
@@ -97,7 +97,7 @@ function populateDates() {
                     selectedMonth = 12;
                 }
             }
-          
+
             if (el.classList.contains('current-month-days')) {
                 if (selectedYear > year) {
                     selectedYear = year;
@@ -149,7 +149,7 @@ function populateDates() {
                 selectedMonth = 12;
             }
         }
-        
+
         if (el.classList.contains('current-month-days')) {
             if (selectedYear > year) {
                 selectedYear = year;
@@ -167,8 +167,9 @@ function populateDates() {
             el.classList.add("highlight-day");
         }
     }
+    console.log(dates)
 }
- 
+
 function goToNextMonth(e) {
     month++;
     if (month > 11) {
