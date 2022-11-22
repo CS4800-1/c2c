@@ -34,6 +34,11 @@ def options():
 @app.route("/testPage")
 def testPage():
 	return render_template('testPage.html')
+
+@app.route("/availability")
+def availability():
+	return render_template('availability.html')
+	
 # @app.route("/1")
 # def go_to_one():
 # 	return redirect(url_for("d1"))
