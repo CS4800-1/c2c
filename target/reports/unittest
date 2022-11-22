@@ -3,7 +3,7 @@ Running tests...
 ----------------------------------------------------------------------
 E...
 ======================================================================
-ERROR [0.012s]: a6MV_tests (unittest.loader._FailedTest)
+ERROR [0.006s]: a6MV_tests (unittest.loader._FailedTest)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
   File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3568.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 59, in testPartExecutor
@@ -24,7 +24,7 @@ ModuleNotFoundError: No module named 'src'
 
 
 ----------------------------------------------------------------------
-Ran 4 tests in 0.147s
+Ran 4 tests in 0.102s
 
 FAILED (errors=1)
 
