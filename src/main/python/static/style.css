@@ -1,201 +1,200 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins' sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" sans-serif;
 }
-body{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
+body {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
 }
-.myText{
-    width: 220px; 
-    height: 40px;
-    background-color: gainsboro;
-    border-radius: 7px;
+.myText {
+  width: 220px;
+  height: 40px;
+  background-color: gainsboro;
+  border-radius: 7px;
 }
-.try{
-    width: 80px; 
-    height: 35px;
-    border-radius: 5px;
+.try {
+  width: 80px;
+  height: 35px;
+  border-radius: 5px;
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input[type="number"] {
-	-moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
 
 .time-picker {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
-	width: 100%;
-	max-width: 200px;
-	margin: 0 auto;
-	padding: 25px 15px;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  padding: 25px 15px;
 
-	background-color: #F3F3F3;
-	border-radius: 8px;
-	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
 
-	color: #53565A;
-	font-size: 42px;
-	font-weight: 700;
+  color: #53565a;
+  font-size: 42px;
+  font-weight: 700;
 
-	user-select: none;
+  user-select: none;
 }
 
 .time-picker .hour,
 .time-picker .minute {
-	position: relative;
-	min-width: 60px;
-	text-align: center;
-	display: flex;
-	justify-content: stretch;
-	align-items: stretch;
+  position: relative;
+  min-width: 60px;
+  text-align: center;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
 }
 
 .time-picker .hour .hr,
 .time-picker .minute .min {
-	background: none;
-	font-size: 42px;
-	appearance: none;
-	border: none;
-	outline: none;
-	display: block;
-	width: 100%;
-	text-align: center;
-	font-family: 'Saira', sans-serif;
+  background: none;
+  font-size: 42px;
+  appearance: none;
+  border: none;
+  outline: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: "Saira", sans-serif;
 }
 
 .time-picker .hour .hr-up,
 .time-picker .hour .hr-down,
 .time-picker .minute .min-up,
 .time-picker .minute .min-down {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 
-	width: 40px;
-	height: 20px;
+  width: 40px;
+  height: 20px;
 
-	border-left: 20px solid transparent;
-	border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
 
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .time-picker .hour .hr-up,
 .time-picker .minute .min-up {
-	top: -15px;
-	border-bottom: 20px solid #AAA;
+  top: -15px;
+  border-bottom: 20px solid #aaa;
 }
 
 .time-picker .hour .hr-down,
 .time-picker .minute .min-down {
-	bottom: -15px;
-	border-top: 20px solid #AAA;
+  bottom: -15px;
+  border-top: 20px solid #aaa;
 }
 
 .time-picker .hour .hr-up:hover,
 .time-picker .hour .hr-down:hover,
 .time-picker .minute .min-up:hover,
 .time-picker .minute .min-down:hover {
-	border-bottom-color: #53565A;
-	border-top-color: #53565A;
+  border-bottom-color: #53565a;
+  border-top-color: #53565a;
 }
 
-.wrapper1 header{
-    display: inline-block;
-    align-items: center;
+.wrapper1 header {
+  display: inline-block;
+  align-items: center;
 }
-.wrapper{
-    width: 450px;
-    background: #fff;
-    border-radius: 10px;
+.wrapper {
+  width: 450px;
+  background: #fff;
+  border-radius: 10px;
 }
-.wrapper header{
-    display: flex;
-    align-items: center;
-    padding: 25px 30px 10px;
-    justify-content: space-between;
+.wrapper header {
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
 }
-header .current-date{
-    font-size: 1.45rem;
-    font-weight: 500;
+header .current-date {
+  font-size: 1.45rem;
+  font-weight: 500;
 }
 header .icons span {
-    height: 38px;
-    width: 38px;
-    font-size: 1.9rem;
-    margin: 0 1px;
-    cursor: pointer;
-    text-align: center;
-    line-height: 38px;
-    border-radius: 20%;
+  height: 38px;
+  width: 38px;
+  font-size: 1.9rem;
+  margin: 0 1px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 20%;
 }
-header .icons span:hover{
-    background: #F8F9F9
+header .icons span:hover {
+  background: #f8f9f9;
 }
-header .icons span:last-child{
-    margin-right: -5px;
+header .icons span:last-child {
+  margin-right: -5px;
 }
 .calendar {
-    padding: 20px;
+  padding: 20px;
 }
-.calendar ul{
-    display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-    text-align: center;
+.calendar ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  text-align: center;
 }
-.calendar .days{
-    margin-bottom: 20px;
+.calendar .days {
+  margin-bottom: 20px;
 }
-.calendar .weeks li{
-    font-weight: 900;
+.calendar .weeks li {
+  font-weight: 900;
 }
 .calendar ul li {
-    position: relative;
-    width: calc(100% / 7);
+  position: relative;
+  width: calc(100% / 7);
 }
-.calendar .days li{
-    z-index: 1;
-    cursor: pointer;
-    margin-top: 30px;
+.calendar .days li {
+  z-index: 1;
+  cursor: pointer;
+  margin-top: 30px;
 }
-.days li.inactive{
-    color: #AAA;
+.days li.inactive {
+  color: #aaa;
 }
-.calendar .days li::before{
-    position: absolute;
-    content:"";
-    height: 40px;
-    width: 40px;
-    top: 50%;
-    left: 50%;
-    z-index: -1;
-    transform: translate(-50%, -50%);
+.calendar .days li::before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
 }
-.days li:hover::before{
-    background: #F8F9F9;
+.days li:hover::before {
+  background: #f8f9f9;
 }
-
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 .light {
   --mainColor: #64bcf4;
   --hoverColor: #5bacdf;
-  --backgroundColor: #f1f8fc;
+  --backgroundColor: white;
   --darkOne: #312f3a;
   --darkTwo: #45424b;
   --lightOne: #919191;
@@ -407,7 +406,6 @@ header .container {
 .person {
   width: 90%;
   transform: translate(5%, 25px);
-
 }
 
 .toggle-btn {
