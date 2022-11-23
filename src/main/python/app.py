@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-	return render_template('index.html', token="Hello Flask+React")
+	return render_template('index.html', token="Hello Flask+React from c2c")
 
 @app.route("/firstCal")
 def firstCal():
