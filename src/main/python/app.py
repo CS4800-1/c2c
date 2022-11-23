@@ -2,10 +2,13 @@ from flask import Flask, render_template, redirect, url_for
 
 app = Flask(__name__)
 
+@app.route("/react")
+def my_react():
+	return render_template('my_react.html', token="Hello Flask+React")
+
 @app.route("/")
 def index():
 	return render_template('index.html')
-	# return "Desktop - 1"
 
 @app.route("/landing")
 def landing():
