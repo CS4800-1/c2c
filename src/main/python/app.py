@@ -40,7 +40,7 @@ def testPage():
 
 @app.route("/availability")
 def availability():
-	return render_template('availability.html')
+	return render_template('availScheduler.js')
 	
 # @app.route("/1")
 # def go_to_one():
