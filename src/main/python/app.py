@@ -22,7 +22,7 @@ def team():
 def about():
 	return render_template('about.html')
 
-@app.route("/work")
+@app.route("/howItWorks")
 def work():
 	return render_template('work.html')
 
