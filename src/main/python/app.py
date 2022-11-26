@@ -30,9 +30,9 @@ def work():
 def createEvent():
 	return render_template('calendar.html')
 
-@app.route("/options")
+@app.route("/getStarted")
 def options():
-	return render_template('createview.html')
+	return render_template('create.html')
 
 @app.route("/testPage")
 def testPage():
