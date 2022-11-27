@@ -14,4 +14,4 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 //use when user is auth, enters uniqueId, and selects their available times
-//read database Events/.../.../availableTimes - initially empty
+//read database Events/eventID/userTimes/person/<array> - initially doesn't exist
