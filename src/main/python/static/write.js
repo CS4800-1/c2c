@@ -25,6 +25,7 @@ function writeUserData(event) { //name, sTime, eTime) {
 	const db = getDatabase();
 	const reference = ref(db, 'Events/');
 
+	//push generates unique id
 	var eventRef = push(reference);
 	var newKey = eventRef.key
 
@@ -41,24 +42,28 @@ function writeUserData(event) { //name, sTime, eTime) {
 		endTime: end_time.value,
 		uniqueKey: newKey,
 		selectedDates: selected_dates
+		// ,
+		// userTimes: { person:[] }
 	};
 
 	console.log(eventObj)
-	//push generates unique id
+	
+// push(reference,
+set(eventRef,
+	{
+		eventName: event_name.value,
+		startTime: start_time.value,
+		endTime: end_time.value,
+		selectedDates: selected_dates
+		// ,
+		// userTimes: { person: [] }
 
-	// push(reference,
-	set(eventRef,
-		{
-			eventName: event_name.value,
-			startTime: start_time.value,
-			endTime: end_time.value,
-			selectedDates: selected_dates
-		}).then(() => {
-			alert("Event Added!\nReference Key: " + newKey)
-		})
-		.catch((error) => {
-			alert(error)
-		});
+	}).then(() => {
+		alert("Event Added!\nReference Key: " + newKey)
+	})
+	.catch((error) => {
+		alert(error)
+	});
 
 
 }

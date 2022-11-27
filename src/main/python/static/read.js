@@ -20,17 +20,23 @@ const uniqueId = document.getElementById('unique_id');
 function readData() {
 	const db = getDatabase();
 	console.log(uniqueId.value);
-	const firebaseRef = ref(db, `Events/${uniqueId.value}`); //-NHNQvVWLDx7e-lbpVHf');
+	const firebaseRef = ref(db, `Events/${uniqueId.value}/userTimes`); //-NHNQvVWLDx7e-lbpVHf');
+	// onValue(firebaseRef, (snapshot) => {
+	// 	console.log(snapshot.val())
+	// 	object.innerHTML = `<div>${snapshot.val()}</div>`
+	// });
+	object.innerHTML = `<div>`
 	onValue(firebaseRef, (snapshot) => {
 		snapshot.forEach(element => {
 			console.log(element.val());
 
-			object.innerHTML += `
-			<div>${element.val()}</div>
-			`
+			object.innerHTML += `${element.val()}\n`
 		});
+		object.innerHTML += `</div>`
 		// const data = snapshot.val();
-	});
+	}
+
+	);
 }
 
 
