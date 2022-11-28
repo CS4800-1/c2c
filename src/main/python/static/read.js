@@ -20,7 +20,7 @@ const uniqueId = document.getElementById('unique_id');
 function readData() {
 	const db = getDatabase();
 	console.log(uniqueId.value);
-	const firebaseRef = ref(db, `Events/${uniqueId.value}/userTimes`); //-NHNQvVWLDx7e-lbpVHf');
+	const firebaseRef = ref(db, `/${uniqueId.value}/userTimes`); //-NHNQvVWLDx7e-lbpVHf');
 	// onValue(firebaseRef, (snapshot) => {
 	// 	console.log(snapshot.val())
 	// 	object.innerHTML = `<div>${snapshot.val()}</div>`

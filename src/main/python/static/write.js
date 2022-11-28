@@ -23,7 +23,7 @@ function writeUserData(event) { //name, sTime, eTime) {
 	event.preventDefault();
 
 	const db = getDatabase();
-	const reference = ref(db, 'Events/');
+	const reference = ref(db, '/');
 
 	//push generates unique id
 	var eventRef = push(reference);
