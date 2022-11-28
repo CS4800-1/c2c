@@ -28,7 +28,7 @@ def work():
 
 @app.route("/createEvent")
 def createEvent():
-	return render_template('calendar.html')
+	return render_template('userAvailability.html')
 
 @app.route("/getStarted")
 def options():
@@ -40,7 +40,7 @@ def testPage():
 
 @app.route("/availability")
 def availability():
-	return render_template('availScheduler.js')
+	return render_template('availability.html')
 	
 # @app.route("/1")
 # def go_to_one():
