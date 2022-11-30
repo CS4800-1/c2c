@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test_tests.TestStringMethods-20221016012001" tests="3" file="test_tests.py" time="0.003" timestamp="2022-10-16T01:20:02" failures="0" errors="0" skipped="0">
-	<testcase classname="test_tests.TestStringMethods" name="test_isupper" time="0.001" timestamp="2022-10-16T01:20:02"/>
-	<testcase classname="test_tests.TestStringMethods" name="test_split" time="0.001" timestamp="2022-10-16T01:20:02"/>
-	<testcase classname="test_tests.TestStringMethods" name="test_upper" time="0.001" timestamp="2022-10-16T01:20:02"/>
-</testsuite>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+  </head>
+  <body>
+    <main>
+      <div class="big-wrapper light">
+        <!-- <img src="{{url_for('static', filename='shape.png')}}" alt="" class="shape" /> -->
+
+        <header>
+          <div class="container">
+            <div class="logo">
+              <img src="../static/coffeebeans.png" alt="Logo" />
+              <h3>coffee2conference</h3>
+            </div>
+
+            <div class="links">
+              <ul>
+                <li><a href="{{ url_for('work') }}">How it Works</a></li>
+                <li><a href="{{ url_for('team') }}">Meet the Team</a></li>
+                <!-- <li><a href="work.html">How it Works</a></li>
+                <li><a href="team.html">Meet the Team</a></li> -->
+                <li>
+                  <a href="#" class="btn" id="googleLogin">Login</a>
+                </li>
+                <!-- <button onclick="googleLogin()"> Login </button> -->
+              </ul>
+            </div>
+
+            <div class="overlay"></div>
+
+            <div class="hamburger-menu">
+              <div class="bar"></div>
+            </div>
+          </div>
+        </header>
+
+        <div class="showcase-area">
+          <div class="container">
+            <div class="left">
+              <div class="big-title">
+                <h1>Smart Scheduling for</h1>
+                <h1>Meetings.</h1>
+              </div>
+              <p class="text">
+                Fill in your availability and find the perfect time to meet up.
+              </p>
+            </div>
+
+            <div class="right">
+              <img
+                src="{{url_for('static', filename='create.png')}}"
+                alt="image of calendar"
+                class="person"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- JavaScript Files -->
+
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="{{url_for('static', filename='app.js')}}"></script>
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js"></script> -->
+    <!-- <script src="{{url_for('static', filename='loginScript.js')}}"></script> -->
+    <!-- <script src="../static/loginScript.js'"></script> -->
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+      import {
+        getAuth,
+        GoogleAuthProvider,
+        signInWithRedirect,
+        signInWithPopup,
+        setPersistence,
+        browserSessionPersistence,
+      } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAaxnJ-eYsIC9A1g_6wAIWCPeRElEVBG3g",
+        authDomain: "coffee2conference.firebaseapp.com",
+        databaseURL: "https://coffee2conference-default-rtdb.firebaseio.com",
+        projectId: "coffee2conference",
+        storageBucket: "coffee2conference.appspot.com",
+        messagingSenderId: "718465301534",
+        appId: "1:718465301534:web:17e424f8ec38caea5a020f",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const provider = new GoogleAuthProvider(app);
+      const auth = getAuth(app);
+
+      googleLogin.addEventListener("click", (e) => {
+        // signInWithRedirect(auth, provider);
+        signInWithPopup(auth, provider)
+          .setPersistence(auth, browserSessionPersistence)
+          // Existing and future Auth states are now persisted in the current
+          // session only. Closing the window would clear any existing state even
+          // if a user forgets to sign out.
+          .then((result) => {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+            // The signed-in user info.
+            const user = result.user;
+            alert(user.displayName);
+            // ...
+          })
+          .catch((error) => {
+            // Handle Errors here.
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // The email of the user's account used.
+            const email = error.customData.email;
+            // The AuthCredential type that was used.
+            const credential = GoogleAuthProvider.credentialFromError(error);
+            // ...
+            alert(errorMessage);
+          });
+      });
+    </script>
+  </body>
+</html>

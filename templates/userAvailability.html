@@ -1,6 +1,5 @@
 <div class="availability-main-wrapper">
   <div class="availability-form-wrapper">
-    <form action="https://formbold.com/s/FORM_ID" method="POST">
       <div class="availability-mb-5 availability-pt-3">
           <label class="availability-form-label availability-form-label-2">
             Add Your Availability
@@ -11,7 +10,7 @@
         <input
           type="text"
           name="name"
-          id="name"
+          id="unique-id"
           placeholder="Enter your unique ID"
           class="availability-form-input"
         />
@@ -21,7 +20,7 @@
         <input
           type="text"
           name="phone"
-          id="phone"
+          id="person-name"
           placeholder="Enter your name"
           class="availability-form-input"
         />
@@ -42,7 +41,7 @@
             <input
               type="time"
               name="time"
-              id="time"
+              id="start-time"
               class="availability-form-input"
             />
           </div>
@@ -53,21 +52,17 @@
             <input
               type="time"
               name="time"
-              id="time"
+              id="end-time"
               class="availability-form-input"
             />
           </div>
         </div>
       </div>
-
-
       <div>
-        <button id="submit-avail" class="availability-btn">Add Your Availability</button>
+        <button class="availability-btn">Add Your Availability</button>
       </div>
-    </form>
   </div>
 </div>
-<script type="module" src="../static/update.js"></script>
 <style>
   * {
     margin: 0;
