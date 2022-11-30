@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, url_for
 
 app = Flask(__name__)
 
@@ -28,7 +28,7 @@ def work():
 
 @app.route("/getStarted")
 def options():
-	return render_template('create.html')
+	return render_template('getStarted.html')
 
 #user makes event
 @app.route("/createEvent")
@@ -36,20 +36,13 @@ def createEvent():
 	return render_template('calendar.html')
 
 #user adds times to event
-@app.route("/availability")
+@app.route("/userAvailability")
 def availability():
 	return render_template('userAvailability.html')
 
-@app.route("/testPage")
+@app.route("/groupAvailability")
 def testPage():
-	return render_template('testPage.html')
-
-
-	
-# @app.route("/1")
-# def go_to_one():
-# 	return redirect(url_for("d1"))
-
+	return render_template('groupAvailability.html')
 
 if __name__=='__main__':
 	app.run(debug=True, host='0.0.0.0', port=8000)

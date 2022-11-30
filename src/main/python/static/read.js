@@ -41,10 +41,9 @@ function readData() {
 
 
 	//display person with their choosen date(s) with times
-	const firebaseRef = ref(db, `/${uniqueId.value}/userTimes`); //-NHNQvVWLDx7e-lbpVHf');
+	const firebaseRef = ref(db, `/${uniqueId.value}/userTimes`);
 
 
-	// get(firebaseRef, (snapshot) => {
 	get(firebaseRef).then((snapshot) => {
 		if (snapshot.exists()) {
 			snapshot.forEach(element => {
