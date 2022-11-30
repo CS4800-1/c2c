@@ -39,11 +39,11 @@ function setTimes(event) { //name, sTime, eTime) {
 	}
 	else
 	{
-		refrence = time;
+		reference = time;
 	}
 
 	set(ref(db,event_id).child("userTimes").child(user_name).child(date),{
-		times: time;
+		times: time
 
 		}).then(() => {
 		alert("Times added: " + time)
@@ -51,12 +51,6 @@ function setTimes(event) { //name, sTime, eTime) {
 	.catch((error) => {
 		alert(error)
 	});
-	
-
-
-
-
-
 }
 
 

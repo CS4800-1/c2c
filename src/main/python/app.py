@@ -26,21 +26,25 @@ def about():
 def work():
 	return render_template('work.html')
 
-@app.route("/createEvent")
-def createEvent():
-	return render_template('userAvailability.html')
-
 @app.route("/getStarted")
 def options():
 	return render_template('create.html')
+
+#user makes event
+@app.route("/createEvent")
+def createEvent():
+	return render_template('calendar.html')
+
+#user adds times to event
+@app.route("/availability")
+def availability():
+	return render_template('userAvailability.html')
 
 @app.route("/testPage")
 def testPage():
 	return render_template('testPage.html')
 
-@app.route("/availability")
-def availability():
-	return render_template('availability.html')
+
 	
 # @app.route("/1")
 # def go_to_one():

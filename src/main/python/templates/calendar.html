@@ -1,115 +1,142 @@
-<div class="availability-main-wrapper">
-  <div class="availability-form-wrapper">
-    <form action="https://formbold.com/s/FORM_ID" method="POST">
-      <div class="availability-mb-5 availability-pt-3">
-          <label class="availability-form-label availability-form-label-2">
-            Add Your Availability
-          </label>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create a Schedule</title>
+  <link rel="stylesheet" href="../static/calstyle.css">
+
+  <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js"></script>
+
+</head>
+
+<div class="main-wrapper">
+  <div class="form-wrapper">
+
+    <body>
+      <div id="logo">
+        <a href="http://google.com">
+          <img src="../static/c2clogo.png" alt="logo" class="logo">
+        </a>
       </div>
-      <div class="availability-mb-5">
-        <label for="name" class="availability-form-label"> Unique ID </label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          placeholder="Enter your unique ID"
-          class="availability-form-input"
-        />
-      </div>
-      <div class="availability-mb-5">
-        <label for="phone" class="availability-form-label"> Name </label>
-        <input
-          type="text"
-          name="phone"
-          id="phone"
-          placeholder="Enter your name"
-          class="availability-form-input"
-        />
-      </div>
-      <div class="availability-mb-5">
-        <label for="date" class="availability-form-label"> Date </label>
-        <input
-          type="date"
-          name="date"
-          id="date"
-          class="availability-form-input"
-        />
-      </div>
-      <div class="flex flex-wrap availability--mx-3">
-        <div class="w-full sm:w-half availability-px-3">
-          <div class="availability-mb-5 w-full">
-            <label for="time" class="availability-form-label"> Start Time </label>
-            <input
-              type="time"
-              name="time"
-              id="time"
-              class="availability-form-input"
-            />
+      <div class="date-picker">
+        <div class="dates">
+          <div class="month-wrapper">
+            <div class="arrow-wrapper-left arrow-wrapper">
+              <div class="arrow-left"></div>
+            </div>
+            <div class="mth"></div>
+            <div class="arrow-wrapper-right arrow-wrapper">
+              <div class="arrow-right"></div>
+            </div>
           </div>
-        </div>
-        <div class="w-full sm:w-half availability-px-3">
-          <div class="availability-mb-5">
-            <label for="time" class="availability-form-label"> End Time </label>
-            <input
-              type="time"
-              name="time"
-              id="time"
-              class="availability-form-input"
-            />
+          <div class="content-wrapper">
+            <div class="weekdays">
+              <div>M</div>
+              <div>T</div>
+              <div>W</div>
+              <div>T</div>
+              <div>F</div>
+              <div>S</div>
+              <div>S</div>
+            </div>
+            <div class="days"></div>
           </div>
         </div>
       </div>
+      <div class="dates-here"></div>
+    </body>
+
+    <script type="text/javascript" src="../static/calscript.js"></script>
 
 
+    <!-- <form action="https://www.google.com/"> -->
+    <form onsubmit="writeUserData(event)">
+      <div class="create-mb-5">
+        <label for="name" class="create-form-label" required> Event Name </label>
+        <input type="text" id="event_name" name="event_name" placeholder="Enter Event Name" class="create-form-input" />
+      </div>
+      <!-- Write your comments here -->
+
+      <div class="flex flex-wrap create--mx-4">
+        <div class="w-full sm:w-half create-px-3">
+          <div class="create-mb-5 w-full">
+            <label for="date" class="create-form-label"> Start Time </label>
+            <input type="time" id="start_time" name="start_time" class="create-form-input" required />
+          </div>
+        </div>
+        <div class="w-full sm:w-half create-px-3">
+          <div class="create-mb-5">
+            <label for="time" class="create-form-label"> End Time </label>
+            <input type="time" id="end_time" name="end_time" class="create-form-input" required />
+          </div>
+        </div>
+      </div>
       <div>
-        <button id="submit-avail" class="availability-btn">Add Your Availability</button>
+        <button type="submit" id="button_submit" class="create-btn">Create Event</button>
       </div>
     </form>
+    <script type="module" src="../static/write.js"></script>
   </div>
 </div>
-<script type="module" src="../static/update.js"></script>
+
+
 <style>
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: white;
   }
+
   body {
     font-family: "Inter", Arial, Helvetica, sans-serif;
   }
-  .availability-mb-5 {
+
+  .create-mb-5 {
     margin-bottom: 20px;
   }
-  .availability-pt-3 {
+
+  .create-pt-3 {
     padding-top: 12px;
   }
-  .availability-main-wrapper {
+
+  .logo {
+    margin-left: 120px;
+  }
+
+  .main-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 48px;
   }
 
-  .availability-form-wrapper {
+  .form-wrapper {
     margin: 0 auto;
     max-width: 550px;
     width: 100%;
     background: white;
+
   }
-  .availability-form-label {
+
+  .create-form-label {
     display: block;
     font-weight: 500;
     font-size: 16px;
     color: #07074d;
     margin-bottom: 12px;
   }
-  .availability-form-label-2 {
+
+  .create-form-label-2 {
     font-weight: 600;
     font-size: 20px;
     margin-bottom: 20px;
   }
 
-  .availability-form-input {
+  .create-form-input {
     width: 100%;
     padding: 12px 24px;
     border-radius: 6px;
@@ -121,47 +148,56 @@
     outline: none;
     resize: none;
   }
-  .availability-form-input:focus {
-    border-color: #f1f8fc;
+
+  .create-form-input:focus {
+    border-color: #5bacdf;
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
   }
 
-  .availability-btn {
+  .create-btn {
     text-align: center;
     font-size: 16px;
     border-radius: 6px;
     padding: 14px 32px;
     border: none;
     font-weight: 600;
-    background-color: #6495ED;
+    background-color: #5bacdf;
     color: white;
     width: 100%;
     cursor: pointer;
   }
-  .availability-btn:hover {
+
+  .create-btn:hover {
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
   }
 
-  .availability--mx-3 {
+  .create--mx-3 {
     margin-left: -12px;
     margin-right: -12px;
   }
-  .availability-px-3 {
+
+  .create-px-3 {
     padding-left: 12px;
     padding-right: 12px;
   }
+
   .flex {
     display: flex;
   }
+
   .flex-wrap {
     flex-wrap: wrap;
   }
+
   .w-full {
     width: 100%;
   }
+
   @media (min-width: 540px) {
     .sm\:w-half {
       width: 50%;
     }
   }
 </style>
+
+</html>
