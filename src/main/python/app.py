@@ -37,12 +37,16 @@ def createEvent():
 
 #user adds times to event
 @app.route("/userAvailability")
-def availability():
+def userAvailability():
 	return render_template('userAvailability.html')
 
 @app.route("/groupAvailability")
-def testPage():
+def groupAvailability():
 	return render_template('groupAvailability.html')
+
+@app.route("/TEST")
+def testPage():
+	return render_template('testPage.html')
 
 if __name__=='__main__':
 	app.run(debug=True, host='0.0.0.0', port=8000)
