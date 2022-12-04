@@ -4,9 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <style>
-      html {
+      body {
         box-sizing: border-box;
-        background-color: #f1f8fc;
         font-family: "Poppins", sans-serif;
       }
 
@@ -358,150 +357,148 @@
     </style>
   </head>
 
-  <body>
-    <header>
-      <div class="container">
-        <div class="logo">
-          <img src="../static/c2clogo.png" alt="Logo" />
-          <input
-            name="logo"
-            type="Image"
-            src="../static/coffeebeans.png"
-            alt="Logo"
-          />
+      <header>
+        <div class="container">
+          <div class="logo">
+            <input
+              name="logo"
+              type="Image"
+              src="../static/coffeebeans.png"
+              alt="logo"
+              style="width: 90px; padding-right: 5px"
+            />
+            <h3>coffee2conference</h3>
+          </div>
+          <div class="links">
+            <ul>
+              <li><a href="{{ url_for('work') }}">How it Works</a></li>
+              <li><a href="{{ url_for('team') }}">Meet the Team</a></li>
+              <!-- <li><a href="work.html">How it Works</a></li>
+                <li><a href="team.html">Meet the Team</a></li> -->
+              <li>
+                <a href="#" class="btn" id="googleLogin">Login</a>
+              </li>
+              <!-- <button onclick="googleLogin()"> Login </button> -->
+            </ul>
+          </div>
+
+          <div class="overlay"></div>
+
+          <div class="hamburger-menu">
+            <div class="bar"></div>
+          </div>
+        </div>
+      </header>
+
+      <h2>MEET OUR TEAM</h2>
+
+      <br />
+
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img
+              src="../static/trina.jpg"
+              alt="Jane"
+              style="
+                width: 80%;
+                padding-left: 48px;
+                padding-top: 27px;
+                height: 242px;
+                margin-left: 10px;
+              "
+            />
+            <div class="container">
+              <h2>Trina Ngo</h2>
+              <p class="title">Front-End Developer</p>
+              <p>CS Major</p>
+            </div>
+          </div>
         </div>
 
-        <div class="links">
-          <ul>
-            <li><a href="{{ url_for('work') }}">How it Works</a></li>
-            <li><a href="{{ url_for('about') }}">About</a></li>
-            <li><a href="{{ url_for('team') }}">Meet the Team</a></li>
-            <li><a href="{{ url_for('landing') }}">Home</a></li>
-            <!-- <li><a href="work.html">How it Works</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="team.html">Meet the Team</a></li>
-          <li><a href="landing.html">Home</a></li> -->
-            <li><a href="#" class="btn" id="googleLogin">Login</a></li>
-          </ul>
+        <div class="column">
+          <div class="card">
+            <img
+              src="../static/urjaa.jpeg"
+              alt="Mike"
+              style="
+                width: 84%;
+                padding-left: 48px;
+                padding-top: 27px;
+                height: 242px;
+              "
+            />
+            <div class="container">
+              <h2>Urjaa</h2>
+              <p class="title">Front-End Developer</p>
+              <p>CS Major</p>
+            </div>
+          </div>
         </div>
 
-        <div class="overlay"></div>
-
-        <div class="hamburger-menu">
-          <div class="bar"></div>
+        <div class="column">
+          <div class="card">
+            <img
+              src="../static/palak.JPG"
+              alt="Mike"
+              style="
+                width: 82%;
+                padding-left: 48px;
+                padding-top: 27px;
+                height: 242px;
+                margin-left: 5px;
+              "
+            />
+            <div class="container">
+              <h2>Palak Malik</h2>
+              <p class="title">Front-End Developer</p>
+              <p>CS Major</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </header>
 
-    <h2>MEET OUR TEAM</h2>
+        <div class="column">
+          <div class="card">
+            <img
+              src="../static/defalut.jpg"
+              alt="Mike"
+              style="
+                width: 82%;
+                padding-left: 48px;
+                padding-top: 27px;
+                height: 242px;
+                margin-left: 5px;
+              "
+            />
+            <div class="container">
+              <h2>Moina Vernon</h2>
+              <p class="title">Back-End Developer</p>
+              <p>CS Major</p>
+            </div>
+          </div>
+        </div>
 
-    <br />
-
-    <div class="row">
-      <div class="column">
-        <div class="card">
-          <img
-            src="../static/trina.jpg"
-            alt="Jane"
-            style="
-              width: 80%;
-              padding-left: 48px;
-              padding-top: 27px;
-              height: 242px;
-              margin-left: 10px;
-            "
-          />
-          <div class="container">
-            <h2>Trina Ngo</h2>
-            <p class="title">Front-End Developer</p>
-            <p>CS Major</p>
+        <div class="column">
+          <div class="card">
+            <img
+              src="../static/defalut.jpg"
+              alt="John"
+              style="
+                width: 82%;
+                padding-left: 48px;
+                padding-top: 27px;
+                height: 242px;
+                margin-left: 5px;
+              "
+            />
+            <div class="container">
+              <h2>Jasmine</h2>
+              <p class="title">Back-End Developer</p>
+              <p>CS Major</p>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="column">
-        <div class="card">
-          <img
-            src="../static/urjaa.jpeg"
-            alt="Mike"
-            style="
-              width: 84%;
-              padding-left: 48px;
-              padding-top: 27px;
-              height: 242px;
-            "
-          />
-          <div class="container">
-            <h2>Urjaa</h2>
-            <p class="title">Front-End Developer</p>
-            <p>CS Major</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <img
-            src="../static/palak.JPG"
-            alt="Mike"
-            style="
-              width: 82%;
-              padding-left: 48px;
-              padding-top: 27px;
-              height: 242px;
-              margin-left: 5px;
-            "
-          />
-          <div class="container">
-            <h2>Palak Malik</h2>
-            <p class="title">Front-End Developer</p>
-            <p>CS Major</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <img
-            src="../static/defalut.jpg"
-            alt="Mike"
-            style="
-              width: 82%;
-              padding-left: 48px;
-              padding-top: 27px;
-              height: 242px;
-              margin-left: 5px;
-            "
-          />
-          <div class="container">
-            <h2>Moina Vernon</h2>
-            <p class="title">Back-End Developer</p>
-            <p>CS Major</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <img
-            src="../static/defalut.jpg"
-            alt="John"
-            style="
-              width: 82%;
-              padding-left: 48px;
-              padding-top: 27px;
-              height: 242px;
-              margin-left: 5px;
-            "
-          />
-          <div class="container">
-            <h2>Jasmine</h2>
-            <p class="title">Back-End Developer</p>
-            <p>CS Major</p>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- <script src="../static/loginScript.js"></script> -->
 
