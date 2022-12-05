@@ -2,6 +2,14 @@
 
 <body>
 
+	<div class="availability-mb-5">
+        <label for="name" class="availability-form-label"> Unique ID </label>
+        <input type="text" name="unique-id" id="unique-id" placeholder="Enter your unique ID"
+          class="availability-form-input" />
+		<button type="submit" id="button_submit" class="availability-btn">Submit</button>
+		<pre id='object'></pre>
+    </div>
+
 	<div class="header">
 		<input type="text" id="unique_id" placeholder="UNIQUE ID...">
 		<button id="button_submit">Submit</button>
@@ -18,3 +26,46 @@
 		<script type="module" src="../static/read.js"></script>
 
 </body>
+<style>
+	body {
+    	font-family: "Inter", Arial, Helvetica, sans-serif;
+  	}
+
+	.availability-form-input {
+		width: 25%;
+		padding: 12px 24px;
+		border-radius: 6px;
+		border: 1px solid #e0e0e0;
+		background: white;
+		font-weight: 500;
+		font-size: 16px;
+		color: #6b7280;
+		outline: none;
+		resize: none;
+	}
+	 .availability-mb-5 {
+    	margin-bottom: 20px;
+  	}
+
+	.availability-pt-3 {
+		padding-top: 12px;
+	}
+
+	.availability-btn{
+		text-align: center;
+		font-size: 16px;
+		border-radius: 6px;
+		padding: 14px 32px;
+		border: none;
+		font-weight: 600;
+		background-color: #6495ED;
+		color: white;
+		width: 10%;
+		cursor: pointer;
+	}
+
+	.button_submit:hover {
+		box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+	}
+
+</style>
