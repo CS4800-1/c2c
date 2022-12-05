@@ -1,12 +1,12 @@
 
-var event_name = document.querySelector("#event_name")
+var uid = document.querySelector("#unique_id")
 
 function testFun() {
 	alert("YOU CLICKED ME!");
 	var eventObj = {
-		eventName: event_name.value
+		uid: uid.value
 	};
 
 	console.log(eventObj)
 }
-document.getElementById("button_test").addEventListener("click", testFun);
+document.getElementById("button_submit").addEventListener("click", testFun);
