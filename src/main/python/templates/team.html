@@ -362,22 +362,21 @@
     <header>
       <div class="container">
         <div class="logo">
-          <img src="../static/coffeebeans.png" alt="Logo" />
-          <h3>coffee2conference</h3>
-        </div>
-
-        <div class="links">
-          <ul>
-            <li><a href="{{ url_for('landing') }}">Home</a></li>
-            <li><a href="{{ url_for('work') }}">How it Works</a></li>
-            <li><a href="{{ url_for('team') }}">Meet the Team</a></li>
-            <!-- <li><a href="work.html">How it Works</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="team.html">Meet the Team</a></li>
-          <li><a href="landing.html">Home</a></li> -->
-            <li><a href="#" class="btn" id="googleLogin">Login</a></li>
-          </ul>
-        </div>
+            <a href="{{ url_for('landing') }}"><img class="logo" src="../static/coffeebeans.png" alt="logo"></a>          
+            <h3>coffee2conference</h3>
+          </div>
+          <div class="links">
+            <ul>
+              <li><a href="{{ url_for('work') }}">How it Works</a></li>
+              <li><a href="{{ url_for('team') }}">Meet the Team</a></li>
+              <!-- <li><a href="work.html">How it Works</a></li>
+                <li><a href="team.html">Meet the Team</a></li> -->
+              <li>
+                <a href="#" class="btn" id="googleLogin">Login</a>
+              </li>
+              <!-- <button onclick="googleLogin()"> Login </button> -->
+            </ul>
+          </div>
 
         <div class="overlay"></div>
 
