@@ -81,6 +81,7 @@
         signInWithPopup,
         setPersistence,
         browserSessionPersistence,
+        onAuthStateChanged
       } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
       // TODO: Add SDKs for Firebase products that you want to use
       // https://firebase.google.com/docs/web/setup#available-libraries
@@ -129,6 +130,16 @@
             alert(errorMessage);
           });
       });
+
+      // onAuthStateChanged(auth, (user) => {
+      //     if (user) {
+      //       console.log(user.uid);
+      //       window.location.href = 'getStarted'
+      //     } else {
+
+      //     }
+      //   });
+
     </script>
   </body>
 </html>
