@@ -1,10 +1,11 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, redirect
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-	return render_template('index.html', token="Hello Flask+React from c2c")
+	return redirect("/landing")
+	# return render_template('index.html', token="Hello Flask+React from c2c")
 
 @app.route("/firstCal")
 def firstCal():
