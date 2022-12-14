@@ -16,11 +16,6 @@
   <div class="form-wrapper">
 
     <body>
-      <div class="logo-row">
-        <a href="landing.html">
-            <img src="../static/c2clogo.png" alt="logo" class="logo">
-        </a>
-      </div>
       <div class="date-picker">
         <div class="dates">
           <div class="month-wrapper">
@@ -76,10 +71,9 @@
       </div>
       <div>
         <button type="submit" id="button_submit" class="create-btn">Create Event</button>
+        <a href="{{ url_for('userAvailability') }}" class="btn">User Availability</a> 
       </div>
     </form>
-        <pre id='object'></pre>
-
     <script type="module" src="../static/write.js"></script>
   </div>
 </div>
